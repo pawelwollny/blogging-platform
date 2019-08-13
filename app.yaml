@@ -4,9 +4,9 @@ threadsafe: true
 
 handlers:
 
-- url: /
-  static_files: blogging-platform/index.html
-  upload: blogging-platform/index.html
+  - url: /
+    static_files: dist/blogging-platform/index.html
+    upload: dist/blogging-platform/index.html
 
-- url: /
-  static_dir: blogging-platform
+  - url: /
+    static_dir: dist/blogging-platform
