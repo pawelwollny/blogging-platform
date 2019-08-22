@@ -1,19 +1,19 @@
 language: node_js
 node_js:
-- '10'
+  - '10'
 dist: bionic
 sudo: required
 branches:
   only:
-  - master
+    - master
 before_script:
-- npm install -g @angular/cli
+  - npm install -g @angular/cli
 script:
-- npm run lint
-- npm run test-headless
-- npm run build-app-engine
+  - npm run lint
+  - npm run test-headless
+  - npm run build-app-engine
 before_deploy:
-- rm -rf node_modules
+  - rm -rf node_modules
 deploy:
   provider: gae
   skip_cleanup: true
@@ -21,5 +21,5 @@ deploy:
   keyfile: client-secret.json
   project: blogging-platform-250317
 before_install:
-- openssl aes-256-cbc -K $encrypted_3cf4743285c4_key -iv $encrypted_3cf4743285c4_iv
-  -in client-secret.json.enc -out client-secret.json -d
+  - openssl aes-256-cbc -K $encrypted_3cf4743285c4_key -iv $encrypted_3cf4743285c4_iv
+    -in client-secret.json.enc -out client-secret.json -d

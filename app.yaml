@@ -1,12 +1,9 @@
 runtime: python27
 api_version: 1
 threadsafe: true
-
 handlers:
-
   - url: /
     static_files: dist/blogging-platform/index.html
     upload: dist/blogging-platform/index.html
-
   - url: /
     static_dir: dist/blogging-platform
